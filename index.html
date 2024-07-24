@@ -14,6 +14,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
         .heart {
             color: #8b0000;
@@ -35,6 +36,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            z-index: 10;
         }
         .message p {
             font-size: 18px;
@@ -43,24 +45,68 @@
         .message h1 {
             color: #ff6347;
         }
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .floating-hearts span {
+            position: absolute;
+            bottom: -50px;
+            width: 15px;
+            height: 15px;
+            background-color: #ff6347;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: float 5s infinite;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(0);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="heart">❤️</div>
     <div class="message">
-        <h1>Para o Amor da Minha Vida</h1>
+        <h1>Pra vc, meu amorzinho</h1>
         <p>
-            Kate, desde o momento em que te conheci, minha vida mudou completamente. Amo cada detalhe em você, cada sorriso, cada olhar, cada gesto. Amo a maneira como você faz cada momento especial, como você ilumina meus dias e aquece meu coração.
+            Desde o momento q te conheci, minha vida mudou d+! Amo cada detalhe em vc, cada sorriso, cada olhar, cada gesto. Amo como vc faz cada momento ser especial, como vc ilumina meus dias e aquece meu coração.
         </p>
         <p>
-            Juntos, construímos um mundo cheio de amor, alegria e cumplicidade. Amo cada aspecto da minha vida com você, desde os momentos mais simples até os mais inesquecíveis. Você é meu tudo, meu amor, meu melhor amigo, meu companheiro de todas as horas.
+            Juntos, construímos um mundo cheio de amor, alegria e cumplicidade. Amo cada aspecto da minha vida com vc, desde os momentos + simples até os + inesquecíveis. Vc é meu tudo, meu amor, meu melhor amigo, meu parceiro de todas as horas.
         </p>
         <p>
-            Eu te amo com toda a minha alma e sou grato por cada instante ao seu lado. Você é a razão do meu sorriso, a melodia do meu coração, a luz dos meus dias. Para sempre, eu e você, juntos, construindo uma história de amor inesquecível.
+            Eu te amo com toda a minha alma e sou mt grato por cada instante ao seu lado. Vc é a razão do meu sorriso, a melodia do meu coração, a luz dos meus dias. Pra sempre, eu e vc, juntos, construindo uma história de amor inesquecível.
         </p>
         <p>
-            Do seu amor eterno.
+            Te amo eternamente. 💕
         </p>
+    </div>
+    <div class="floating-hearts">
+        <span style="left: 10%; animation-delay: 0s; animation-duration: 5s;"></span>
+        <span style="left: 20%; animation-delay: 1s; animation-duration: 4s;"></span>
+        <span style="left: 30%; animation-delay: 2s; animation-duration: 6s;"></span>
+        <span style="left: 40%; animation-delay: 3s; animation-duration: 3s;"></span>
+        <span style="left: 50%; animation-delay: 4s; animation-duration: 5s;"></span>
+        <span style="left: 60%; animation-delay: 0.5s; animation-duration: 4.5s;"></span>
+        <span style="left: 70%; animation-delay: 1.5s; animation-duration: 5.5s;"></span>
+        <span style="left: 80%; animation-delay: 2.5s; animation-duration: 3.5s;"></span>
+        <span style="left: 90%; animation-delay: 3.5s; animation-duration: 4.5s;"></span>
     </div>
 </body>
 </html>
